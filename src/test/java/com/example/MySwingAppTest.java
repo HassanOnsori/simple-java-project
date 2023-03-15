@@ -8,8 +8,8 @@ public class MySwingAppTest {
 
 
 // Configuration to run in a headless environment
-   @BeforeAll
-   public static void setUpClass() {
+   @BeforeClass
+   public static void setupHeadlessMode() {
        System.setProperty("java.awt.headless", "true");
    }
 
