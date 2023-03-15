@@ -18,3 +18,6 @@ cd simple-java-project
 ## Build the project
 mvn clean install
 
+To run the unit tests, you can use the following command:
+## Run the unit tests
+mvn test
