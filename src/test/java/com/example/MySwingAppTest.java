@@ -1,14 +1,16 @@
 package com.example;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeAll;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class MySwingAppTest {
 
-    // Configuration to run in a headless environment
-    @BeforeClass
+
+// Configuration to run in a headless environment
+    @BeforeAll
     public static void setUpClass() {
         System.setProperty("java.awt.headless", "false");
     }
