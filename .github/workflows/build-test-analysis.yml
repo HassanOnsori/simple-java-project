@@ -13,24 +13,27 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-          cache: 'maven'
-
-      - name: Build with Maven
-        run: mvn clean package
-
-      - name: Test with Maven
-        run: mvn test
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Docker
+        uses: docker/setup-docker@v2
+        
+      - name: Build Docker image
+        run: docker build -t my-swing-app .
+        
+      - name: Run tests
+        run: |
+          docker run -it --rm \
+            -v "$(pwd)":/app \
+            -e DISPLAY=$DISPLAY \
+            -v /tmp/.X11-unix:/tmp/.X11-unix \
+            my-swing-app mvn test
