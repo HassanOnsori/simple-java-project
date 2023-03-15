@@ -23,10 +23,8 @@ public class MySwingAppTest {
 
     @Test
     public void testLabel() {
-        app = new MySwingApp();
-        String expectedText = "Hello, world!";
-        String actualText = app.getLabelText();
-        Assertions.assertEquals(expectedText, actualText);
+        MySwingApp app = new MySwingApp();
+        assertEquals("Hello, Swing!", app.label.getText());
     }
 }
 
