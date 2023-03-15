@@ -2,7 +2,7 @@
 
 This project requires the following dependencies:
 
-Java 17 - The latest version of Java is required to compile and run the project.
+Java 17 - The version of Java is required to compile and run the project.
 Maven - The project uses Maven as its build tool. Maven is used to manage dependencies, compile source code, and run tests.
 JUnit 5 - The project uses JUnit 5 as its testing framework. JUnit 5 is used to write and run unit tests.
 
