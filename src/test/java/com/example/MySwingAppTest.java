@@ -16,6 +16,11 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 public class MySwingAppTest {
 
     private MySwingApp app;
+    
+    @BeforeAll
+    public static void setUpClass() {
+        System.setProperty("java.awt.headless", "true");
+    }
 
     @BeforeAll
     public static void setUp() {
