@@ -29,11 +29,15 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      - name: Build with Maven
-        run: mvn clean package
+      - name: Install xvfb
+        run: sudo apt-get install -y xvfb
+
+      - name: Start virtual display
+        run: xvfb-run -a mvn clean package
+
 
       - name: Test with Maven
-        run: mvn test
+        run: xvfb-run -a mvn test
         
       - name: Cache SonarQube packages
         uses: actions/cache@v3
