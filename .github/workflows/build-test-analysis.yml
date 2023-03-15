@@ -1,10 +1,10 @@
-This workflow will trigger on every push or pull request to the main branch. It will run on the ubuntu-latest environment and perform the following steps:
-1. Check out the code from the repository.
-2. Set up Java 17 on the runner.
-3. Build the project using Maven.
-4. Run the unit tests using Maven.
-5. Cache the Maven repository to speed up builds.
-6. Generate an HTML report of the test results using the JUnit Test Report action.
+# This workflow will trigger on every push or pull request to the main branch. It will run on the ubuntu-latest environment and perform the following steps:
+# 1. Check out the code from the repository.
+# 2. Set up Java 17 on the runner.
+# 3. Build the project using Maven.
+# 4. Run the unit tests using Maven.
+# 5. Cache the Maven repository to speed up builds.
+# 6. Generate an HTML report of the test results using the JUnit Test Report action.
 
 
 name: Build-Test-Analysis
