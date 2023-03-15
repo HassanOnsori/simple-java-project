@@ -58,8 +58,4 @@ jobs:
             -Dsonar.organization=hassanonsori
             -Dsonar.projectKey=HassanOnsori_my-swing-app 
             -Dsonar.login=$SONAR_TOKEN
-            
-      - name: JUnit Test Report
-        uses: EnricoMi/JUnit_Test_Report@v2
-        with:
-          path-to-test-report: target/surefire-reports/TEST-*.xml
+
