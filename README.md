@@ -9,12 +9,12 @@ JUnit 5 - The project uses JUnit 5 as its testing framework. JUnit 5 is used to 
 To build and run the project, you will need to have Java 17 and Maven installed on your system. You can download the latest version of Java from the Oracle website and install Maven by following the instructions on the Maven website.
 
 Once you have Java and Maven installed, you can clone the project from GitHub and run the following commands to build and run the project:
-# Clone the project from GitHub
+## Clone the project from GitHub
 git clone https://github.com/HassanOnsori/simple-java-project.git
 
-# Navigate to the project directory
+## Navigate to the project directory
 cd simple-java-project
 
-# Build the project
+## Build the project
 mvn clean install
 
